@@ -12,7 +12,7 @@ export function useIsVisible(scaled = false) {
   const scale = useTransform(
     scrollYProgress,
     [0, 0.5, 0.7, 1],
-    [1, 1.1, 1.1, 1],
+    [1, 1.75, 1.75, 1],
   );
 
   return scaled ? { ref, opacity, scale } : { ref, opacity };

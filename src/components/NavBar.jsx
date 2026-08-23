@@ -1,14 +1,14 @@
-import logoImg from "../assets/logo-temp.png";
+import logoImg from "../assets/logo.png";
 import { motion } from "framer-motion";
 
-const TABS = ["home", "about", "experience", "projects", "art"];
+const TABS = ["home", "about", "skills", "experience", "projects", "art"];
 
 export default function NavBar() {
   return (
-    <nav className="navbar flex sticky top-0">
+    <motion.nav className="navbar flex sticky top-0 text-[var(--accent-text)]">
       <ul className="flex gap-4 list-none p-6 items-center">
         <a href={`#home`}>
-          <img className="w-8 h-8" src={logoImg} />
+          <img className="object-cover w-14 h-12" src={logoImg} />
         </a>
       </ul>
       <motion.ul
@@ -19,13 +19,13 @@ export default function NavBar() {
       >
         {TABS.map((tab, index) => (
           <li key={index}>
-            <motion.a whileHover={{ color: "var(--accent)" }} href={`#${tab}`}>
+            <motion.a whileHover={{ color: "var(--text)" }} href={`#${tab}`}>
               {" "}
               / {tab}
             </motion.a>
           </li>
         ))}
       </motion.ul>
-    </nav>
+    </motion.nav>
   );
 }

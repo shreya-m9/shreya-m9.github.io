@@ -55,11 +55,14 @@ export default function ScrambleText({ title }) {
       onHoverEnd={stop}
       onViewportEnter={scrambling}
       onViewportLeave={stop}
+      className="scramble-wrapper w-fit"
     >
       {display.map((value) => (
         <motion.span
           animate={{
-            color: value.final_status ? "var(--text)" : "var(--accent-bg)",
+            color: value.final_status
+              ? "var(--accent-body)"
+              : "var(--accent-bg)",
           }}
         >
           {value.char}

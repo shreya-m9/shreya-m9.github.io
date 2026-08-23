@@ -6,15 +6,16 @@ export default function ProjectTab({ title, onSelect, isSelected }) {
         scale: 1.1,
         originX: 1,
         backgroundColor: "var(--accent-bg)",
+        color: "var(--text)",
       }}
       onClick={onSelect}
       animate={{
-        borderColor: isSelected ? "var(--accent)" : "var(--accent-bg)",
+        borderColor: isSelected ? "var(--text)" : "var(--border)",
         borderRightWidth: isSelected ? "3px" : "1px",
       }}
-      className="flex w-20 h-10 justify-center items-center"
+      className="rounded-l flex w-20 h-fit py-2 justify-center items-center"
     >
-      <p className="text-xs">{title}</p>
+      <p className=" text-[14px] pb-1 py-1">{title}</p>
     </motion.button>
   );
 }

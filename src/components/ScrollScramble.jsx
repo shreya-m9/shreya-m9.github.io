@@ -35,7 +35,7 @@ export default function ScrollScramble({ title, progress, length }) {
         <motion.span
           key={value.id}
           animate={{
-            color: value.final_status ? "var(--text)" : "var(--accent-bg)",
+            color: value.final_status ? "var(--text)" : "var(--accent)",
           }}
         >
           {value.char}

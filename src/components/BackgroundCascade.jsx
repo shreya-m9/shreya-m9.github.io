@@ -27,7 +27,9 @@ function ScrambleCol({ title }) {
   return (
     <div className="flex flex-col items-center">
       {display.map((letter, index) => (
-        <span key={index}>{letter}</span>
+        <span className="pixel-text text-[16px]" key={index}>
+          {letter}
+        </span>
       ))}
     </div>
   );
@@ -69,7 +71,7 @@ export function Cascade() {
               times: [0, 0.15, 0.85, 1], // fades in over first 15%, fades out over last 15%
             },
           }}
-          className="absolute text-sm text-[var(--accent-bg)]"
+          className="absolute text-sm text-[var(--accent-text)]"
           key={col.id}
         >
           <ScrambleCol title={randomLetterString(col.length)} />

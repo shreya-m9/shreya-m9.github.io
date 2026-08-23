@@ -18,19 +18,22 @@ export default function Tagline() {
         <Cascade />
       </div>
       <div ref={ref} className="relative h-[150vh] pt-35">
-        <motion.p
+        <motion.h2
           ref={scrollRef}
           style={{ opacity, scale }}
-          className="text-[30px] text-center sticky top-0 h-screen flex items-center justify-center"
+          className="text-[40px] text-center sticky top-0 h-screen flex flex-col items-center justify-center accent-font"
         >
           <ScrollScramble
-            title={
-              "PASSIONATE ABOUT THE CONVERGENCE OF GENOMICS, DATA, AND DESIGN"
-            }
+            title={"PASSIONATE ABOUT THE CONVERGENCE OF"}
             progress={scrollYProgress}
-            length={100}
+            length={75}
           />
-        </motion.p>
+          <ScrollScramble
+            title={"GENOMICS, DATA, AND DESIGN"}
+            progress={scrollYProgress}
+            length={75}
+          />
+        </motion.h2>
       </div>
     </div>
   );

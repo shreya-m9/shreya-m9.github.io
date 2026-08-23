@@ -1,12 +1,11 @@
 :root {
-  --text: #0c1016;
-  --text-h: #0c1016;
-  --bg: #f0f6f8;
-  --border: #0c1016;
-  --code-bg: #f0f6f8;
-  --accent: #a4acae;
-  --accent-bg: #a4acae5f;
-  --accent-border: #0c1016;
+  --text: #308066;
+  --accent-text: #8ab3d3;
+  --accent-body: #799ebb;
+  --bg: #bdd3da;
+  --border: #8ab3d3;
+  --accent: #9bc598;
+  --accent-bg: #cee6ee;
   --shadow: #0c1016 0 10px 15px -3px, #0c1016 0 4px 6px -2px;
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
@@ -30,42 +29,40 @@
 
 @font-face {
   font-family: "BodyFont";
-  src: url("src/fonts/MinecraftRegular.otf") format("opentype");
+  src: url("src/fonts/ithaca.ttf") format("truetype");
+}
+
+.pixel-text {
+  font-family: "BodyFont", sans-serif;
 }
 
 @font-face {
   font-family: "HeaderFont";
-  src: url("src/fonts/MinecraftBold.otf") format("opentype");
+  src: url("src/fonts/Gobbita.otf") format("opentype");
 }
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+@font-face {
+  font-family: "AccentFont";
+  src: url("src/fonts/Warheed.ttf") format("truetype");
 }
-*/
+
+.header-text {
+  font-family: "HeaderFont", sans-serif;
+}
+
+.accent-font {
+  font-family: "AccentFont", sans-serif;
+}
+
 body {
   margin: 0;
+  color: var(--accent-body);
 }
 
 #root {
   width: 100%;
   max-width: 100%;
-  margin: 5px;
+  margin: 0px;
   text-align: left;
   min-height: 100svh;
   display: flex;
@@ -73,15 +70,17 @@ body {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+@layer base {
+  h1,
+  h2 {
+    font-weight: 500;
+    color: var(--text-h);
+  }
 }
 
 h1 {
-  font-size: 170px;
+  font-family: "AccentFont", sans-serif;
+  font-size: 150px;
   margin: 32px 0;
   @media (max-width: 1024px) {
     font-size: 36px;
@@ -89,6 +88,7 @@ h1 {
   }
 }
 h2 {
+  font-family: "HeaderFont", sans-serif;
   font-size: 32px;
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -97,6 +97,85 @@ h2 {
     font-size: 20px;
   }
 }
-p {
+
+@layer base {
+  h3 {
+    font-size: 26px;
+    font-family: "BodyFont", sans-serif;
+  }
+}
+@layer base {
+  p {
+    font-size: 23px;
+    font-family: "BodyFont", sans-serif;
+    margin: 0;
+  }
+}
+@layer base {
+  a {
+    font-size: 23px;
+    font-family: "BodyFont", sans-serif;
+  }
+}
+@layer base {
+  li {
+    font-size: 23px;
+    font-family: "BodyFont", sans-serif;
+  }
+}
+
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("./assets/noise.svg");
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.navbar {
+  position: sticky;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/noise.svg");
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.blob-gradient {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.scramble-wrapper {
+  --accent-body: var(--accent-body);
+  --accent-bg: var(--accent-bg);
+}
+
+.scramble-wrapper:hover {
+  --accent-body: var(--text);
+  --accent-bg: var(--accent);
 }

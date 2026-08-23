@@ -13,8 +13,15 @@ export default function Home() {
   });
 
   return (
-    <div className="relative min-h-screen">
-      <div className="absolute inset-0 z-0 overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
+      {/*<div className="absolute top-[0%] left-[27%] w-[1300px] h-[1150px] z-0">
+        <img src={blobSvg} className="blob-gradient" />
+      </div>
+
+      <div className="absolute top-[-20%] left-[55%] w-[900px] h-[850px] z-0">
+        <img src={blob2Svg} className="blob-gradient" />
+      </div>*/}
+      <div className="absolute -inset-1 z-0">
         <Cascade />
       </div>
       <div
@@ -22,7 +29,9 @@ export default function Home() {
         className="relative flex pl-10 pt-90 justify-end h-screen shrink-0"
       >
         <motion.div
-          style={{ opacity }}
+          style={{
+            opacity,
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1.5 }}
