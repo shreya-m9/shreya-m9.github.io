@@ -17,7 +17,10 @@ export default function Home() {
       <div className="absolute -inset-1 z-0">
         <Cascade />
       </div>
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 2.5 }}
         ref={ref}
         className="relative flex pl-10 pt-90 justify-end h-screen shrink-0"
       >
@@ -25,9 +28,6 @@ export default function Home() {
           style={{
             opacity,
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 2.5 }}
         >
           <div className="flex items-center gap-10">
             <h1 className="pl-50 pb-12">
@@ -46,7 +46,7 @@ export default function Home() {
             />
           </h1>
         </motion.div>
-      </div>
+      </motion.div>
       <div ref={scrollRef} className="h-[10vh]" />
     </div>
   );
