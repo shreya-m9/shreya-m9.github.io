@@ -14,13 +14,6 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/*<div className="absolute top-[0%] left-[27%] w-[1300px] h-[1150px] z-0">
-        <img src={blobSvg} className="blob-gradient" />
-      </div>
-
-      <div className="absolute top-[-20%] left-[55%] w-[900px] h-[850px] z-0">
-        <img src={blob2Svg} className="blob-gradient" />
-      </div>*/}
       <div className="absolute -inset-1 z-0">
         <Cascade />
       </div>
@@ -34,7 +27,7 @@ export default function Home() {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1.5 }}
+          transition={{ delay: 0.5, duration: 2.5 }}
         >
           <div className="flex items-center gap-10">
             <h1 className="pl-50 pb-12">
