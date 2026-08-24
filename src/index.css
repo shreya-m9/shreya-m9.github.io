@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: "BodyFont";
-  src: url("src/fonts/ithaca.ttf") format("truetype");
+  src: url("./public/fonts/ithaca.ttf") format("truetype");
 }
 
 .pixel-text {
@@ -38,12 +38,12 @@
 
 @font-face {
   font-family: "HeaderFont";
-  src: url("src/fonts/Gobbita.otf") format("opentype");
+  src: url("./public/fonts/Gobbita.otf") format("opentype");
 }
 
 @font-face {
   font-family: "AccentFont";
-  src: url("src/fonts/Warheed.ttf") format("truetype");
+  src: url("./public/fonts/Warheed.ttf") format("truetype");
 }
 
 .header-text {
