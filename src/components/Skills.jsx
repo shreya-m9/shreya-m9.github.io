@@ -17,7 +17,7 @@ const LANGUAGES = [
 
 const CONCEPTS = ["git + github", "REST API", "machine learning"];
 
-const LABRATORY = ["pipetting", "PCR", "mass spec"];
+const LABORATORY = ["pipetting", "PCR", "mass spec"];
 export default function Skills() {
   const { ref, opacity } = useIsVisible();
   return (
@@ -64,9 +64,9 @@ export default function Skills() {
             </motion.li>
           ))}
         </ul>
-        <h3 className="pt-6 pb-2">labratory:</h3>
+        <h3 className="pt-6 pb-2">laboratory:</h3>
         <ul className="mt-2 grid grid-cols-3 pl-4 gap-x-4 gap-y-2">
-          {LABRATORY.map((skill) => (
+          {LABORATORY.map((skill) => (
             <motion.li
               whileHover={{ scale: 1.1, color: "var(--text)" }}
               className="flex items-center gap-1"
