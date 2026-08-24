@@ -1,4 +1,4 @@
-import headshotImg from "../assets/headshot.jpg";
+import headshotImg from "../assets/headshot.JPG";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 import { useIsVisible } from "../hooks/useIsVisible";
