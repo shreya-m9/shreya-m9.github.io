@@ -53,14 +53,14 @@ export default function About() {
             google research's neural mapping
           </motion.a>{' '}
           and{' '}
-          <a 
+          <motion.a 
             href="https://www.illumina.com/areas-of-interest/genomics-in-drug-development/cell-atlas.html" 
             target="_blank" 
             whileHover={{ color: "var(--text)" }}
             transition={{ duration: 0.2 }}
           >
             illumina's billion cell atlas program
-          </a>{' '}
+          </motion.a>{' '}
           are some projects that currently inspire me. in my free time, you can find me drawing, 
           taking photos, or camping out at one of boston's many cafes.
         </p>
