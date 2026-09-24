@@ -43,10 +43,9 @@ export default function About() {
           genetics to improve human health. my design background also has me
           hooked on 3D modeling and visual innovation.
           <br /> <br />
-          i've mostly worked in traditional data science roles so far, but [ex1,
-          ex2, ex3] are some projects that currently inspire me. in my free
-          time, you can find me drawing, taking photos, or camping out at one of
-          boston's many cafes.
+          i've mostly worked in traditional data science roles so far, but Google Research's Neural Mapping and Illumina's 
+          Billion Cell Atlas Program are some projects that currently inspire me. in my free time, you can find me drawing, 
+          taking photos, or camping out at one of boston's many cafes.
         </p>
         <ul className="border-t border-[var(--border)] w-fit ml-auto pt-2 flex flex-row list-none mt-4 gap-4 justify-end">
           {SOCIALS.map((social, index) => {
