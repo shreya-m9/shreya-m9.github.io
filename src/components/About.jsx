@@ -43,8 +43,25 @@ export default function About() {
           genetics to improve human health. my design background also has me
           hooked on 3D modeling and visual innovation.
           <br /> <br />
-          i've mostly worked in traditional data science roles so far, but Google Research's Neural Mapping and Illumina's 
-          Billion Cell Atlas Program are some projects that currently inspire me. in my free time, you can find me drawing, 
+          i've mostly worked in traditional data science roles so far, but{' '}
+          <motion.a 
+            href="https://sites.research.google/gr/neural-mapping/" 
+            target="_blank" 
+            whileHover={{ color: "var(--text)" }}
+            transition={{ duration: 0.2 }}
+          >
+            google research's neural mapping
+          </motion.a>{' '}
+          and{' '}
+          <a 
+            href="https://www.illumina.com/areas-of-interest/genomics-in-drug-development/cell-atlas.html" 
+            target="_blank" 
+            whileHover={{ color: "var(--text)" }}
+            transition={{ duration: 0.2 }}
+          >
+            illumina's billion cell atlas program
+          </a>{' '}
+          are some projects that currently inspire me. in my free time, you can find me drawing, 
           taking photos, or camping out at one of boston's many cafes.
         </p>
         <ul className="border-t border-[var(--border)] w-fit ml-auto pt-2 flex flex-row list-none mt-4 gap-4 justify-end">
